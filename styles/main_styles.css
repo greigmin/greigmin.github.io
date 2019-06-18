@@ -194,7 +194,6 @@ ul
 	display: -webkit-flex; 
 	display: flex;
 	flex-direction: column;
-	padding: 50px;
 	justify-content: center;
 	align-items: center;
 }
@@ -251,7 +250,7 @@ select {
   color: #fff;
 }
 h1 {
-	font-size: 25px;
+	font-size: 20px;
 	text-align: center;
 	margin-bottom: 50px;
 	line-height: 2em;

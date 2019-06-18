@@ -6,28 +6,6 @@
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-<script type="text/javascript">
-	function myfunc(form){
-		var A = form.value_a.value;
-		var B = form.value_b.value;
-		var result = 0;
-		var arr = [];
-		for (var i = A; i<B; i++) {
-			b = String(i);
-			for (j = 0; j < b.length; j++) {
-				if (Number(i) % Number(b[j]) == 0) {
-					result++;
-				}
-			}
-			if (Number(b.length) == Number(result)) {
-
-				arr.push(i);
-			}
-			result = 0;
-		}
-		alert(arr);
-	}
-</script>
 </head>
 <body>
 	<header class="header">
@@ -68,7 +46,7 @@
 									</li>
 									<li class="hassubs">
 										<a href="31.html">Задания на работу с DOM</a>
-										<ul>
+										<ul >
 											<li><a href="31.html">Задание 1</a></li>
 											<li><a href="32.html">Задание 2</a></li>
 											<li><a href="33.html">Задание 3</a></li>
@@ -79,17 +57,29 @@
 										</ul>
 									</li>
 								</ul>
-						</div>
+						</div >
 					</div>
 				</div>
 			</div>
 		</div>
-	<form class="main" id="form">
-		<h1>1.14. Найти все целые числа из интервала от N до M, которые делятся на каждую из своих цифр.</h1>
-		<input type="number" name="value_a"  id="value_a" class="inputnumber" placeholder="Введите N">
-		<input type="number" name="value_b"  id="value_b" class="inputnumber" placeholder="Введите M">
-		<input class="button-deactive" type="button" onclick="myfunc(document.getElementById('form'))" name="submit" value="Найти">
-	</form>
+	<main class="main" >
+		<h1>3.2. Создать web-страницу, в которой отображается таблица умножения для чисел от 1 до 10.</h1>
+		<table> 
+			<script language="JavaScript"> 
+				document.write("<tr bgcolor='#8c6239' ><td style='font-size:20px; padding:10px'> </td>"); 
+				for (i = 1; i <=10; i++) document.write("<td style='font-size:20px; padding:10px'>"+i+" </td>"); 
+				document.write("</tr>"); 
+				for (i = 1; i <=10; i++){ 
+					document.write("<tr><td bgcolor='#8c6239' style='font-size:20px; padding:10px'> "  + i + " </td>"); 
+					for (j = 1; j <= 10; j++) { 
+						document.write("<td style='font-size:20px; padding:10px'>" + (i*j) + " </td>");} 
+					document.write("</tr>"); 
+				} 
+			</script> 
+		</table>
+	</main>
+	
+	
 <script src="styles/bootstrap4/popper.js"></script>
 <script src="styles/bootstrap4/bootstrap.min.js"></script>
 </body>
