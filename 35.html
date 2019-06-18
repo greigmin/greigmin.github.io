@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>Фомин 14222 ВБ</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<script>
+    function plus(form){
+			form.style.fontSize = "60px";
+		}
+	function minus(form){
+			form.style.fontSize = "30px";
+		}
+</script>
+
+</head>
+<body>
+	<header class="header">
+		<div class="header_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_content d-flex flex-row align-items-center justify-content-start">
+							<nav class="main_nav">
+								<ul>
+									<li class="hassubs">
+										<a href="index.html">Задачи на работу с числами</a>
+										<ul>
+											<li><a href="index.html">Задание 1</a></li>
+											<li><a href="12.html">Задание 2</a></li>
+											<li><a href="13.html">Задание 3</a></li>
+											<li><a href="14.html">Задание 4</a></li>
+											<li><a href="15.html">Задание 5</a></li>
+											<li><a href="16.html">Задание 6</a></li>
+											<li><a href="17.html">Задание 7</a></li>
+											<li><a href="18.html">Задание 8</a></li>
+											<li><a href="19.html">Задание 9</a></li>
+											<li><a href="10.html">Задание 10</a></li>
+											<li><a href="111.html">Задание 11</a></li>
+											<li><a href="112.html">Задание 12</a></li>
+											<li><a href="113.html">Задание 13</a></li>
+											<li><a href="114.html">Задание 14</a></li>
+											<li><a href="115.html">Задание 15</a></li>
+										</ul>
+									</li>
+									<li class="hassubs">
+										<a href="21.html">Работа с структурами данных</a>
+										<ul>
+											<li><a href="21.html">Задание 1</a></li>
+											<li><a href="23.html">Задание 3</a></li>
+											<li><a href="27.html">Задание 7</a></li>
+										</ul>
+									</li>
+									<li class="hassubs">
+										<a href="31.html">Задания на работу с DOM</a>
+										<ul>
+											<li><a href="31.html">Задание 1</a></li>
+											<li><a href="33.html">Задание 3</a></li>
+											<li><a href="35.html">Задание 5</a></li>
+											<li><a href="36.html">Задание 6</a></li>
+											<li><a href="38.html">Задание 8</a></li>
+											<li><a href="39.html">Задание 9</a></li>
+										</ul>
+									</li>
+								</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div class="main" id="form">
+		<h1>3.5. Создайте приложение, содержащее слова «Один», «Два», «Три». При наведении мыши на любое из слов, оно увеличивается в размерах, отображаясь на том же самом месте.</h1>
+		<table>
+		<tr>
+			<td id="1" onmouseover = plus(document.getElementById('1')) onmouseout = minus(document.getElementById('1')) class="razm"> Один 
+			</td>
+			<td id="2" onmouseover = plus(document.getElementById('2')) onmouseout = minus(document.getElementById('2')) class="razm">Два
+			</td>
+			<td id="3" onmouseover = plus(document.getElementById('3')) onmouseout = minus(document.getElementById('3')) class="razm">Три
+			</td>
+		</tr>
+	</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>Фомин 14222 ВБ</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+ <script type="text/javascript">
+		 function insert(num){
+                document.form.textview.value = document.form.textview.value+num
+            }
+            function equal(){
+                var exp = document.form.textview.value
+                if(exp){
+                    document.form.textview.value = eval(exp)
+                }
+            }
+            function clean(){
+                document.form.textview.value = ""
+
+            }
+            function back(){
+                var exp = document.form.textview.value
+                document.form.textview.value = exp.substring(0,exp.length-1)
+            }
+	</script>
+</head>
+<body>
+	<header class="header">
+		<div class="header_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_content d-flex flex-row align-items-center justify-content-start">
+							<nav class="main_nav">
+								<ul>
+									<li class="hassubs">
+										<a href="index.html">Задачи на работу с числами</a>
+										<ul>
+											<li><a href="index.html">Задание 1</a></li>
+											<li><a href="12.html">Задание 2</a></li>
+											<li><a href="13.html">Задание 3</a></li>
+											<li><a href="14.html">Задание 4</a></li>
+											<li><a href="15.html">Задание 5</a></li>
+											<li><a href="16.html">Задание 6</a></li>
+											<li><a href="17.html">Задание 7</a></li>
+											<li><a href="18.html">Задание 8</a></li>
+											<li><a href="19.html">Задание 9</a></li>
+											<li><a href="10.html">Задание 10</a></li>
+											<li><a href="111.html">Задание 11</a></li>
+											<li><a href="112.html">Задание 12</a></li>
+											<li><a href="113.html">Задание 13</a></li>
+											<li><a href="114.html">Задание 14</a></li>
+											<li><a href="115.html">Задание 15</a></li>
+										</ul>
+									</li>
+									<li class="hassubs">
+										<a href="21.html">Работа с структурами данных</a>
+										<ul>
+											<li><a href="21.html">Задание 1</a></li>
+											<li><a href="23.html">Задание 3</a></li>
+											<li><a href="27.html">Задание 7</a></li>
+										</ul>
+									</li>
+									<li class="hassubs">
+										<a href="31.html">Задания на работу с DOM</a>
+										<ul>
+											<li><a href="31.html">Задание 1</a></li>
+											<li><a href="33.html">Задание 3</a></li>
+											<li><a href="35.html">Задание 5</a></li>
+											<li><a href="36.html">Задание 6</a></li>
+											<li><a href="38.html">Задание 8</a></li>
+											<li><a href="39.html">Задание 9</a></li>
+										</ul>
+									</li>
+								</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<main class="main">
+		<h1>3.3. Создать web-страницу калькулятор, производящий основные арифметические операции.</h1>
+		<form name="form" class="first_block">
+            	<!--<input class="textview" name="textview">-->
+            	<textarea class="textview" name="textview" disabled  height="100" scrolling="no"></textarea>
+            	<input class ="button_clean" type="button" value="C" onclick="clean()">
+            </form>
+
+            <table class ="buttons">
+                <tr>
+                    <td><input class ="button" type="button" value="7" onclick="insert(7)"></td>
+                    <td><input class ="button" type="button" value="8" onclick="insert(8)"></td>
+                    <td><input class ="button" type="button" value="9" onclick="insert(9)"></td>
+                    <td><input class ="button_gold" type="button" value="÷" onclick="insert('/')"></td>
+                </tr>
+                <tr>
+                    <td><input class ="button" type="button" value="4" onclick="insert(4)"></td>
+                    <td><input class ="button" type="button" value="5" onclick="insert(5)"></td>
+                    <td><input class ="button" type="button" value="6" onclick="insert(6)"></td>
+                    <td><input class ="button_gold" type="button" value="×" onclick="insert('*')"></td>
+                </tr>
+                <tr>
+                    <td><input class ="button" type="button" value="1" onclick="insert(1)"></td>
+                    <td><input class ="button" type="button" value="2" onclick="insert(2)"></td>
+                    <td><input class ="button" type="button" value="3" onclick="insert(3)"></td>
+                    <td><input class ="button_gold" type="button" value="−" onclick="insert('-')"></td>                    
+                </tr>
+                <tr>
+                    <td><input class ="button" type="button" value="0" onclick="insert(0)"></td>
+                    <td><input class ="button" type="button" value="." onclick="insert('.')"></td>
+                    <td><input class ="button_grey" type="button" value="=" onclick="equal()"></td>
+                    <td><input class ="button_gold" type="button" value="+" onclick="insert('+')"></td>
+                </tr>
+            </table>
+	</main>
+
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+</body>
+</html>

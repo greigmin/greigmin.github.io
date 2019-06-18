@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>Фомин 14222 ВБ</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+ <script type="text/javascript">
+	  var DragManager = new function() {
+      var dragObject = {};
+
+      var self = this;
+
+      function onMouseDown(e) {
+
+        if (e.which != 1) return;
+
+        var elem = e.target.closest('.draggable');
+        if (!elem) return;
+
+        dragObject.elem = elem;
+
+        dragObject.downX = e.pageX;
+        dragObject.downY = e.pageY;
+
+        return false;
+      }
+
+      function onMouseMove(e) {
+        if (!dragObject.elem) return; 
+
+        if (!dragObject.avatar) { 
+          var moveX = e.pageX - dragObject.downX;
+          var moveY = e.pageY - dragObject.downY;
+
+          if (Math.abs(moveX) < 3 && Math.abs(moveY) < 3) {
+            return;
+          }
+
+          dragObject.avatar = createAvatar(e); 
+          if (!dragObject.avatar) { 
+            dragObject = {};
+            return;
+          }
+
+          var coords = getCoords(dragObject.avatar);
+          dragObject.shiftX = dragObject.downX - coords.left;
+          dragObject.shiftY = dragObject.downY - coords.top;
+
+          startDrag(e); 
+        }
+
+        dragObject.avatar.style.left = e.pageX - dragObject.shiftX + 'px';
+        dragObject.avatar.style.top = e.pageY - dragObject.shiftY + 'px';
+
+        return false;
+      }
+
+      function onMouseUp(e) {
+        if (!dragObject.avatar) { 
+          finishDrag(e);
+        }
+
+        dragObject = {};
+      }
+
+      function finishDrag(e) {
+        var dropElem = findDroppable(e);
+
+        if (!dropElem) {
+          self.onDragCancel(dragObject);
+        } else {
+          self.onDragEnd(dragObject, dropElem);
+        }
+      }
+
+      function createAvatar(e) {
+        var avatar = dragObject.elem;
+        return avatar;
+      }
+
+      function startDrag(e) {
+        var avatar = dragObject.avatar;
+
+        document.body.appendChild(avatar);
+        avatar.style.zIndex = 9999;
+        avatar.style.position = 'absolute';
+      }
+
+      function findDroppable(event) {
+        dragObject.avatar.hidden = true;
+
+        var elem = document.elementFromPoint(event.clientX, event.clientY);
+
+        dragObject.avatar.hidden = false;
+
+        if (elem == null) {
+          return null;
+        }
+
+        return elem.closest('.droppable');
+      }
+
+      document.onmousemove = onMouseMove;
+      document.onmouseup = onMouseUp;
+      document.onmousedown = onMouseDown;
+
+      this.onDragEnd = function(dragObject, dropElem) {};
+      this.onDragCancel = function(dragObject) {};
+    };
+
+
+    function getCoords(elem) { 
+      var box = elem.getBoundingClientRect();
+
+      return {
+        top: box.top + pageYOffset,
+        left: box.left + pageXOffset
+      };
+    }
+	</script>
+</head>
+<body>
+	<header class="header">
+		<div class="header_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_content d-flex flex-row align-items-center justify-content-start">
+							<nav class="main_nav">
+								<ul>
+									<li class="hassubs">
+										<a href="index.html">Задачи на работу с числами</a>
+										<ul>
+											<li><a href="index.html">Задание 1</a></li>
+                      <li><a href="12.html">Задание 2</a></li>
+                      <li><a href="13.html">Задание 3</a></li>
+                      <li><a href="14.html">Задание 4</a></li>
+                      <li><a href="15.html">Задание 5</a></li>
+                      <li><a href="16.html">Задание 6</a></li>
+                      <li><a href="17.html">Задание 7</a></li>
+                      <li><a href="18.html">Задание 8</a></li>
+                      <li><a href="19.html">Задание 9</a></li>
+                      <li><a href="10.html">Задание 10</a></li>
+                      <li><a href="111.html">Задание 11</a></li>
+                      <li><a href="112.html">Задание 12</a></li>
+                      <li><a href="113.html">Задание 13</a></li>
+                      <li><a href="114.html">Задание 14</a></li>
+                      <li><a href="115.html">Задание 15</a></li>
+										</ul>
+									</li>
+									<li class="hassubs">
+										<a href="21.html">Работа с структурами данных</a>
+										<ul>
+											<li><a href="21.html">Задание 1</a></li>
+											<li><a href="23.html">Задание 3</a></li>
+											<li><a href="27.html">Задание 7</a></li>
+										</ul>
+									</li>
+									<li class="hassubs">
+										<a href="31.html">Задания на работу с DOM</a>
+										<ul>
+											<li><a href="31.html">Задание 1</a></li>
+                      <li><a href="33.html">Задание 3</a></li>
+                      <li><a href="35.html">Задание 5</a></li>
+                      <li><a href="36.html">Задание 6</a></li>
+                      <li><a href="38.html">Задание 8</a></li>
+                      <li><a href="39.html">Задание 9</a></li>
+										</ul>
+									</li>
+								</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<main class="main">
+		<h1>3.8. Реализовать скрипт, позволяющий перетаскивать мышью изображение. Пользователь пытается мышью перетащить изображение; затем он отпускает кнопку мыши и перемещает указатель в нужное место (при этом он может удерживать или не удерживать кнопку мыши в нажатом положении); остановившись в нужном месте, пользователь отпускает кнопку мыши или щелкает ею, чтобы прекратить перемещение изображения.</h1>
+		<div class="circle draggable"></div>
+	</main>
+
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+</body>
+</html>
